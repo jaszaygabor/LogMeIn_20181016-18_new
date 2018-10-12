@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Belépés</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+	<link rel="icon" type="image/png" href="images/logo1.png"/>
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-b-20">
+				<form class="login100-form validate-form" name="form">
+					<span class="login100-form-title p-b-10">
+					Üdvözlünk, <br> A Gépész Informatika Tantárában	
+					</span>
+					<span class="login100-form-avatar">
+						<img src="images/gepesz.png">
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-35">
+						<input class="input100"  type="text" name="email" onchange="eltun()">
+						<span class="focus-input100" data-placeholder="E-mail címed"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-20">
+						<input class="input100" id="check"  type="password" name="jelszo">
+						<span class="focus-input100" data-placeholder="Jelszavad"></span>
+					<i class="material-icons m-b-35 m-l-10 szem" id="eye" onclick="asd()">&#xe417;</i></div>
+					
+
+<div class="container-login100-form-btn">
+	<button class="login100-form-btn">
+		Belépés
+	</button>
+</div>
+
+					<ul class="login-more p-t-45">
+						<li class="m-b-8">
+							<span class="txt1">
+								Elfelejtetted?
+							</span>
+
+							<a href="#" class="txt2">
+								E-mail címedet / Jelszavadat
+							</a>
+						</li>
+
+						<li>
+							<span class="txt1">
+								Nincs felhasználód? 
+							</span>
+
+							<a href="reg.html" class="txt2">
+								Regisztrálj
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	 <footer><p class="update">Utoljára frissítve: 2018.10.12.</p>
+	 	<p class="txt">Mátészalkai Szakképzési Centrum Gépészeti Szakgimnáziuma és Kollégiuma</p>
+	 	<p class="txt">4700 Mátészalka, Kölcsey u. 12.</p>
+	 	
+
+    </footer>
+	<script>
+function asd() {
+    var pass = document.getElementById("check");
+    var eye_color = document.getElementById("eye");
+    if (pass.type === "password") {
+        pass.type = "text";
+      eye_color.style.color = " #e60000";
+    } else {
+        pass.type = "password";
+        eye_color.style.color = "#57b846";
+    }
+}
+
+</script>
+</body>
+</html>

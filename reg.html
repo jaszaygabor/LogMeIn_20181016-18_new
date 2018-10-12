@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Regisztráció</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="icon" type="image/png" href="images/logo1.png"/>
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="m-l-10">
+<a href="index.html" >	<button class="m-t-20 back"><span class="p-10">Vissza</span></button></a>
+</div>
+		<div class="container-login100">
+			<div class="wrap-login100 p-b-20">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-20">
+                      Egyszerű és gyors regisztrálás	
+					</span>
+
+					<span class="login100-form-avatar">
+						<img src="images/gepesz.png" alt="logo">
+					</span>
+
+					<div class="wrap-input100 validate-input mm-t-10 m-b-25">
+						<input class="input100" type="text" name="v_nev">
+						<span class="focus-input100" data-placeholder="Vezetékneved"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-25">
+						<input class="input100" type="text" name="k_nev">
+						<span class="focus-input100" data-placeholder="Keresztneved"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-25">
+					<input class="input100" type="text" name="kor">
+					<span class="focus-input100" data-placeholder="Korod"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-25">
+					<input class="input100" type="text" name="ev">
+					<span class="focus-input100" data-placeholder="Születési éved"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-25">
+					<input class="input100" type="text" name="email">
+					<span class="focus-input100" data-placeholder="E-mail címed"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-25">
+					<input class="input100" type="text" name="om">
+					<span class="focus-input100" data-placeholder="OM kódod"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-25">
+						<input class="input100" id="myInput" type="password" name="jelszo">
+						<span class="focus-input100" id="myInput" data-placeholder="Jelszavad"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-35">
+						<input class="input100" id="myInput2" type="password" name="jelszo2">
+						<span class="focus-input100" data-placeholder="Jelszavad megerősítése"></span>
+					</div>
+					<p id="text" class="m-b-30">A CapsLock be van kapcsolva!</p>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Regisztrálok 
+						</button>
+					</div>
+
+					<ul class="login-more p-t-45">
+						<li class="m-b-8">
+							<span class="txt1">
+								Valami problémád adódott a regisztrációval?
+							</span>
+
+							<a href="#" class="txt2">
+							Írj!
+							</a>
+
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer><p class="update">Utoljára frissítve: 2018.10.12.</p>
+	 	<p class="txt">Mátészalkai Szakképzési Centrum Gépészeti Szakgimnáziuma és Kollégiuma</p>
+	 	<p class="txt">4700 Mátészalka, Kölcsey u. 12.</p>
+	 	
+
+    </footer>
+	<script type="text/javascript">
+		var input = document.getElementById("myInput");
+var text = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
+
+if (event.getModifierState("CapsLock")) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none"
+  }
+});	
+
+		var input2 = document.getElementById("myInput2");
+var text = document.getElementById("text");
+input2.addEventListener("keyup", function(event) {
+
+if (event.getModifierState("CapsLock")) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none"
+  }
+});	
+	</script>
+
+</body>
+</html>
