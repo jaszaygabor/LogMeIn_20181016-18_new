@@ -6,21 +6,17 @@
 // for more information : http://phiras.wordpress.com/2007/04/08/password-strength-meter-a-jquery-plugin/
 
 var shortPass = 'Túl rövid'
-var badPass = 'Használj betűket és számokat!'
-var goodPass = 'Használs speciális karaktereket!'
-var strongPass = 'Megfelelő jelszó'
-var sameAsUsername = 'A jelszó megegyezik a felhasználónévvel!'
+var badPass = 'Használjon betűket és számokat!'
+var goodPass = 'Használjon speciális karaktereket is!'
+var strongPass = 'Megfelelő jelszó.'
 
 
-function passwordStrength(password,username)
+function passwordStrength(password)
 {
     score = 0 
     
     //password < 4
     if (password.length < 4 ) { return shortPass }
-    
-    //password == username
-    if (password.toLowerCase() == username.toLowerCase()) return sameAsUsername
     
     //password length
     score += password.length * 4
@@ -61,15 +57,12 @@ function passwordStrength(password,username)
 
 
 
-function passwordStrengthPercent(password,username)
+function passwordStrengthPercent(password)
 {
     score = 0 
     
     //password < 4
     if (password.length < 4 ) { return 0 }
-    
-    //password == username
-    if (password.toLowerCase()==username.toLowerCase()) return 0
     
     //password length
     score += password.length * 4
@@ -130,24 +123,10 @@ jQuery(document).ready(function()
 {
   var bpos = "";
   var perc = 0 ;
-  var minperc = 0 ;
   $('#password').css( {backgroundPosition: "0 0"} );
-  $('#username').keyup(function(){
-		$('#result').html(passwordStrength($('#password').val(),$('#username').val())) ;
-		perc = passwordStrengthPercent($('#password').val(),$('#username').val());
-
-		bpos=" $('#colorbar').css( {backgroundPosition: \"0px -" ;
-		bpos = bpos + perc + "px";
-		bpos = bpos + "\" } );";
-		bpos=bpos +" $('#colorbar').css( {width: \"" ;
-		bpos = bpos + (perc * 2) + "px";
-		bpos = bpos + "\" } );";
-		eval(bpos);
-	    	$('#percent').html(" " + perc  + "% ");
-	              })
   $('#password').keyup(function(){
-		$('#result').html(passwordStrength($('#password').val(),$('#username').val())) ; 
-		perc = passwordStrengthPercent($('#password').val(),$('#username').val());
+		$('#result').html(passwordStrength($('#password').val())) ; 
+		perc = passwordStrengthPercent($('#password').val());
 		
 		bpos=" $('#colorbar').css( {backgroundPosition: \"0px -" ;
 		bpos = bpos + perc + "px";
