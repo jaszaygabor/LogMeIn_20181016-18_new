@@ -7,16 +7,19 @@
 	<link rel="icon" type="image/png" href="images/logo1.png"/>
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/reg.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/passwordStrengthMeter.js"></script>
 </head>
 <body>
 
 	<div class="limiter">
 		<div class="m-l-10">
-<a href="index.html" >	<button class="m-t-20 back"><span class="p-10">Vissza</span></button></a>
+<a href='javascript:history.back(1)' >	<button class="m-t-20 back"><span class="p-10">Vissza</span></button></a>
 </div>
 		<div class="container-login100">
 			<div class="wrap-login100 p-b-20">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" name="regisztracioEll" action="RegEll.php">
 					<span class="login100-form-title p-b-20">
                       Egyszerű és gyors regisztrálás	
 					</span>
@@ -27,54 +30,50 @@
 
 					<div class="wrap-input100 validate-input mm-t-10 m-b-25">
 						<input class="input100" type="text" name="v_nev">
-						<span class="focus-input100" data-placeholder="Vezetékneved"></span>
+						<span class="focus-input100" data-placeholder="Vezetékév"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-25">
 						<input class="input100" type="text" name="k_nev">
-						<span class="focus-input100" data-placeholder="Keresztneved"></span>
+						<span class="focus-input100" data-placeholder="Keresztnév"></span>
 					</div>
-					
-					<div class="wrap-input100 validate-input m-b-25">
-					<input class="input100" type="text" name="kor">
-					<span class="focus-input100" data-placeholder="Korod"></span>
-					</div>
-					
 					<div class="wrap-input100 validate-input m-b-25">
 					<input class="input100" type="text" name="ev">
-					<span class="focus-input100" data-placeholder="Születési éved"></span>
+					<span class="focus-input100" data-placeholder="Szül. év"></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-25">
 					<input class="input100" type="text" name="email">
-					<span class="focus-input100" data-placeholder="E-mail címed"></span>
+					<span class="focus-input100" data-placeholder="E-mail cím" id="username"></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-25">
 					<input class="input100" type="text" name="om">
-					<span class="focus-input100" data-placeholder="OM kódod"></span>
+					<span class="focus-input100" data-placeholder="OM kód"></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-25">
-						<input class="input100" id="myInput" type="password" name="jelszo">
-						<span class="focus-input100" id="myInput" data-placeholder="Jelszavad"></span>
+						<input class="input100" id="password" type="password" name="jelszo">
+						<span class="focus-input100"data-placeholder="Jelszó"></span>
+						<div class="graybar" id="graybar"></div>
+						<div class="colorbar" id="colorbar"></div>
+						<span class="percent" id="percent">0%</span>
+						<span class="result" id='result'></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-35">
 						<input class="input100" id="myInput2" type="password" name="jelszo2">
-						<span class="focus-input100" data-placeholder="Jelszavad megerősítése"></span>
+						<span class="focus-input100" data-placeholder="Jelszó megerősítése"></span>
 					</div>
 					<p id="text" class="m-b-30">A CapsLock be van kapcsolva!</p>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Regisztrálok 
-						</button>
+						<input type="submit" name="btnSubmit" value="Regisztrálció" class="login100-form-btn">
 					</div>
 
 					<ul class="login-more p-t-45">
 						<li class="m-b-8">
 							<span class="txt1">
-								Valami problémád adódott a regisztrációval?
+								Valami probléma adódott a regisztrációval?
 							</span>
 
 							<a href="#" class="txt2">
-							Írj!
+							Írjon!
 							</a>
 
 						</li>
@@ -90,7 +89,7 @@
 
     </footer>
 	<script type="text/javascript">
-		var input = document.getElementById("myInput");
+		var input = document.getElementById("password");
 var text = document.getElementById("text");
 input.addEventListener("keyup", function(event) {
 
