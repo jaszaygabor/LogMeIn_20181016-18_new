@@ -23,7 +23,6 @@
   color:red;
 }
 body, html {
-	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
   user-select: none;
 }
@@ -112,8 +111,8 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
-  min-height: 100vh;
+  width: 100%;
+  margin-top:20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -122,7 +121,7 @@ iframe {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   background: #fff;  
 }
 
@@ -140,10 +139,11 @@ iframe {
 .login100-form-title {
   display: block;
   font-family: Poppins-Bold;
-  font-size: 35px;
+  font-size: 30px;
   color: #333333;
   line-height: 1.2;
   text-align: center;
+  margin-bottom:10px;
 }
 
 .login100-form-avatar {
@@ -182,10 +182,9 @@ margin-top:10px;
   font-size: 18px;
   color: #555555;
   line-height: 1.2;
-
   display: block;
   width: 100%;
-  height: 50px;
+  height: 40px;
   background: transparent;
   padding: 0 5px;
 }
@@ -217,7 +216,7 @@ margin-top:10px;
   font-size: 18px;
   color: #999999;
   line-height: 1.2;
-  content: attr(data-placeholder);
+  content: attr(placeholder);
   display: block;
   width: 100%;
   position: absolute;
@@ -228,7 +227,7 @@ margin-top:10px;
 }
 
 .input100:focus + .focus-input100::after {
-  top: -20px;
+  top: -5px;
   font-size: 15px;
 }
 
@@ -314,9 +313,9 @@ margin-top:10px;
 .container-login100-form-btn
 {
   width:100%;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 .login100-form-btn
 {
@@ -329,7 +328,8 @@ margin-top:10px;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  width: 100%;
+  width: 93%;
+  margin-left:3.5%;
   height: 50px;
   background-color: #57b846;
   border-radius: 25px;

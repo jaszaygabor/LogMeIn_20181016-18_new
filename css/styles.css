@@ -150,7 +150,7 @@ li ol, li ul {
 }
 
 header {
-	padding: 50px 0px 180px;
+	padding: 50px 0px 55px;
 	margin: 0 auto;
 	text-align:center;
 }
@@ -231,7 +231,7 @@ img {
 
 
 article {
-    padding: 10px 10px 20px 5px;
+    padding: 10px 10px 0px 5px;
  }
 
 article h2 {
