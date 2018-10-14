@@ -126,7 +126,7 @@ iframe {
 }
 
 .wrap-login100 {
-	width:500px;
+  width:500px;
   max-width:100%;
   background: #fff;
 }
@@ -242,6 +242,7 @@ margin-top:10px;
 
 .validate-input {
   position: relative;
+  margin-top: 11px;
 }
 
 .alert-validate::before {
@@ -296,6 +297,7 @@ margin-top:10px;
 .login-more li {
   position: relative;
   padding-left: 16px;
+  MARGIN-TOP:20PX;
 }
 
 .login-more li::before {
@@ -315,6 +317,7 @@ margin-top:10px;
   width:100%;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top:20px;
   
 }
 .login100-form-btn
