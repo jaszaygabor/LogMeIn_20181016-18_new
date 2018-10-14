@@ -352,7 +352,6 @@ position: absolute;
     color: white;
 }
 
-
 .img1
 {  
 height: 100px;
@@ -395,4 +394,8 @@ footer .footer-content ul { width: auto; float: none; }
 {
   top: 0;
   text-align: center;
+}
+.footer-text
+{
+  font-size:13px;
 }
