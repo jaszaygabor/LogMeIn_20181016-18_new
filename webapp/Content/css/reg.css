@@ -1,0 +1,8 @@
+/*
+    $ http://www.jquery-plugins.hu $
+*/
+
+/* .example { float: left; width: 400px; } */
+.colorbar { float: left; height: 5px; width: 0px; margin-top: -3px; background-image: url(../images/passwordstrength.jpg); }
+.percent { float: right; margin-top: -11px; margin-left: 5px; font-size: 11px;}
+.result {font-family: Tahoma; margin-top: -12px; margin-left: 5px; font-size: 11px; float: right; color: red; }
