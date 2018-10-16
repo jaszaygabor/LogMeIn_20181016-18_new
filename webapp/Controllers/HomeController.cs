@@ -39,5 +39,9 @@ namespace webapp.Controllers
         {
             return View();
         }
+        public ActionResult Linux()
+        {
+            return View();
+        }
     }
 }
