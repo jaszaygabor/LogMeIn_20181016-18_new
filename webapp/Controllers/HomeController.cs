@@ -35,15 +35,6 @@ namespace webapp.Controllers
             bob.BirthDate = new DateTime(2000, 1, 1);
             return View(bob);
         }
-        public ActionResult halozat()
-        {
-            return View();
-        }
-        public ActionResult Linux()
-        {
-            return View();
-        }
-
         public ActionResult programozas()
         {
             this.ViewBag.Page = "Programozas";
@@ -54,5 +45,21 @@ namespace webapp.Controllers
             this.ViewBag.Page = "html_css_js";
             return View();
         }
+        public ActionResult linux()
+        {
+            this.ViewBag.Page = "linux";
+            return View();
+        }
+        public ActionResult iszgy()
+        {
+            this.ViewBag.Page = "iszgy";
+            return View();
+        }
+        public ActionResult halozat()
+        {
+            this.ViewBag.Page = "halozat";
+            return View();
+        }
+
     }
 }

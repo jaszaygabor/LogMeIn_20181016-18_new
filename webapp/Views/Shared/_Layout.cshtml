@@ -1,7 +1,6 @@
 ﻿@using webapp.Helpers;
 
 <!DOCTYPE html>
-<html>
 <html lang="hu">
 <head>
     <meta charset="utf-8" />
@@ -18,27 +17,12 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
+    <div class="navbar">
+        <a href="~/Views/Home/index.html" title="Kijelentkezés"><i class="fa icon">&#xf08b;</i></a>
+        <a href="#" title="Kérdés"><i class="fa icon" onclick="document.getElementById('id01').style.display='block'">&#xf059;</i></a>
     </div>
     <div class="width">
+        <header>
         <h1><a href="~/Views/Home/logon.html">GIT</a></h1>
 
         <nav>
@@ -49,21 +33,28 @@
                     @Html.ActionLink("Programozás", "programozas", "Home")
                 </li>
 
-                <li class="start @(ViewBag.Page == "html_css_js" ? "active" : "")">
+                <li class="start @Html.IsActive("Home", "html_css_js")">
                     @Html.ActionLink("HTML+CSS+JS", "html_css_js", "Home")
                 </li>
-                <li><a href="~/Views/Home/linux.html">Linux</a></li>
-                <li><a href="~/Views/Home/iszgy.html">Iszgy</a></li>
-                <li class="end selected"><a href="~/Views/Home/halozat.html">Hálózat</a></li>
+
+                <li class="start @Html.IsActive("Home", "linux")">
+                    @Html.ActionLink("Linux", "linux", "Home")
+                </li>
+
+                <li class="start @Html.IsActive("Home", "iszgy")">
+                    @Html.ActionLink("Iszgy", "iszgy", "Home")
+                </li>
+
+                <li class="start @Html.IsActive("Home", "halozat")">
+                    @Html.ActionLink("Hálózat", "halozat", "Home")
+                </li>
             </ul>
 
         </nav>
-
-
-    </div>
+        </header>
+</div>
+    @RenderBody()
     <div class="container body-content">
-        @RenderBody()
-        <hr />
         <footer>
             <p><img src="~/Content/images/logo.png"></p>
             <p class="footer-text">Minden jog fenntartva!</p>
