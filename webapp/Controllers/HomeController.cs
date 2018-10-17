@@ -43,5 +43,11 @@ namespace webapp.Controllers
         {
             return View();
         }
+
+        public ActionResult programozas()
+        {
+            this.ViewBag.Page = "Programozas";
+            return View();
+        }
     }
 }
