@@ -45,7 +45,7 @@
 
             <ul>
 
-                <li class="start @(ViewBag.Page == "Programozas" ? "active" : "")">
+                <li class="start @Html.IsActive("Home", "programozas")">
                     @Html.ActionLink("Programozás", "programozas", "Home")
                 </li>
 
