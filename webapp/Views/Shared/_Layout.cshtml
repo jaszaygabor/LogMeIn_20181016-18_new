@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+<html lang="hu">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,12 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/png" href="~/Content/images/logo1.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/css/logon.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -29,11 +36,32 @@
             </div>
         </div>
     </div>
+    <div class="width">
+        <h1><a href="~/Views/Home/logon.html">GIT</a></h1>
+
+        <nav>
+
+            <ul>
+
+                <li class="start @(ViewBag.Page == "Programozas" ? "active" : "")">
+                    @Html.ActionLink("Programozás", "programozas", "Home")
+                </li>
+                <li class=""><a href="~/Views/Home/html_css_js.html">HTML+CSS+JS</a></li>
+                <li><a href="~/Views/Home/linux.html">Linux</a></li>
+                <li><a href="~/Views/Home/iszgy.html">Iszgy</a></li>
+                <li class="end selected"><a href="~/Views/Home/halozat.html">Hálózat</a></li>
+            </ul>
+
+        </nav>
+
+
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p><img src="~/Content/images/logo.png"></p>
+            <p class="footer-text">Minden jog fenntartva!</p>
         </footer>
     </div>
 
