@@ -49,5 +49,10 @@ namespace webapp.Controllers
             this.ViewBag.Page = "Programozas";
             return View();
         }
+        public ActionResult html_css_js()
+        {
+            this.ViewBag.Page = "html_css_js";
+            return View();
+        }
     }
 }

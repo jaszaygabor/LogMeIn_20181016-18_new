@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using webapp.Helpers;
+
+<!DOCTYPE html>
 <html>
 <html lang="hu">
 <head>
@@ -46,7 +48,10 @@
                 <li class="start @(ViewBag.Page == "Programozas" ? "active" : "")">
                     @Html.ActionLink("Programozás", "programozas", "Home")
                 </li>
-                <li class=""><a href="~/Views/Home/html_css_js.html">HTML+CSS+JS</a></li>
+
+                <li class="start @(ViewBag.Page == "html_css_js" ? "active" : "")">
+                    @Html.ActionLink("HTML+CSS+JS", "html_css_js", "Home")
+                </li>
                 <li><a href="~/Views/Home/linux.html">Linux</a></li>
                 <li><a href="~/Views/Home/iszgy.html">Iszgy</a></li>
                 <li class="end selected"><a href="~/Views/Home/halozat.html">Hálózat</a></li>
