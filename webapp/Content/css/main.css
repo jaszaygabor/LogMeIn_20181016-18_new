@@ -189,6 +189,7 @@ position: absolute;
   height: 40px;
   background: transparent;
   padding: 0 5px;
+  border:none;
 }
 
 .focus-input100 {

@@ -228,7 +228,8 @@ position: absolute;
   transition: all 0.4s;
 }
 
-.input100:focus + .focus-input100::after {
+.input100:focus + .focus-input100::after,
+.input100.filled + .focus-input100::after {
   top: -5px;
   font-size: 15px;
 }

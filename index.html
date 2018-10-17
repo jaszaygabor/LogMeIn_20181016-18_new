@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="hu">
 <head>
 	<title>Belépés</title>
@@ -22,12 +22,12 @@
 					</span>
 
 					<div class="wrap-input100">
-						<input class="input100"  type="text" name="email" onchange="eltun()">
+						<input class="input100"  type="text" name="email" onblur="eltun(event)">
 						<span class="focus-input100" placeholder="E-mail cím"></span>
 					</div>
 
 					<div class="wrap-input100">
-						<input class="input100" id="check"  type="password" name="jelszo">
+						<input class="input100" id="check"  type="password" name="jelszo" onblur="eltun(event)">
 						<span class="focus-input100" placeholder="Jelszó"></span>
 					<i class="material-icons m-b-35 m-l-10 szem" id="eye" onclick="asd()">&#xe417;</i></div>
 					
@@ -59,6 +59,15 @@
 
     </footer>
 	<script>
+function eltun(event)
+{
+        if (event.srcElement.value) {
+		event.srcElement.classList.add("filled");
+	}else
+{
+	event.srcElement.classList.remove("filled");
+}
+}
 function asd() {
     var pass = document.getElementById("check");
     var eye_color = document.getElementById("eye");

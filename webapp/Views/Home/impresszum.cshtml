@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "";
+}
+@* Ide nem kell layout *@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Regisztráció</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="~/Content/images/logo1.png" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/reg.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/passwordStrengthMeter.js"></script>
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="m-l-10"><a href='javascript:history.back(1)'><button class="back"><span class="p-10">Vissza</span></button></a></div>
+
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" method="post" name="regisztracioEll" action="RegEll.php">
+                   
+                    <span class="login100-form-avatar">
+                        <img src="~/Content/images/gepesz.png" alt="logo">
+                    </span>
+
+                 <ul>
+                     <li>Weblap designer: Bakos Richárd 11.a</li>
+                     <li>Html+css+JavaScript: Bakos Richárd 11.a</li>
+                     <li>JavaScript: Jászay Gábor 11.b</li>
+                     <li>Webszerverre adoptálták (Asp.Net FrameWork): Bakos Richárd, Jászay Gábor, Orosz Regina (ETGimi 12.b), Balogh Ádám 10.b, Szabó Bence 11.a</li>
+                 </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="update">Utoljára frissítve: 2018.10.12.</p>
+        <p class="txt">Mátészalkai Szakképzési Centrum Gépészeti Szakgimnáziuma és Kollégiuma</p>
+        <p class="txt">4700 Mátészalka, Kölcsey u. 12.</p>
+        <p class="footer-text">Minden jog fenntartva!</p>
+
+    </footer>
+    <script type="text/javascript">
+function eltun(event)
+{
+        if (event.srcElement.value) {
+		event.srcElement.classList.add("filled");
+	}else
+{
+	event.srcElement.classList.remove("filled");
+}
+}
+		var input = document.getElementById("password");
+		var text = document.getElementById("text");
+		input.addEventListener("keyup", function(event) {
+
+		if (event.getModifierState("CapsLock")) {
+			text.style.display = "block";
+		  } else {
+			text.style.display = "none"
+		  }
+		});
+
+		var input2 = document.getElementById("password2");
+		var text = document.getElementById("text");
+		input2.addEventListener("keyup", function(event) {
+
+		if (event.getModifierState("CapsLock")) {
+			text.style.display = "block";
+		  } else {
+			text.style.display = "none"
+		  }
+		});
+    </script>
+</body>
+</html>

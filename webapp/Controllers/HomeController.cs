@@ -67,6 +67,11 @@ namespace webapp.Controllers
             this.ViewBag.Page = "reg";
             return View();
         }
+        public ActionResult impresszum()
+        {
+            this.ViewBag.Page = "impresszum";
+            return View();
+        }
 
     }
 }
