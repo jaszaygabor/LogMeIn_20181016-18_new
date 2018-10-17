@@ -16,46 +16,61 @@
     <link rel="stylesheet" href="~/Content/css/logon.css" type="text/css" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
-<body>
-    <div class="width">
-        <header>
-        <h1><a href="~/Views/Home/logon.html">GIT</a></h1>
-
-        <nav>
-
-            <ul>
-
-                <li class="start @Html.IsActive("Home", "html_css_js")">
-                    @Html.ActionLink("HTML+CSS+JS", "html_css_js", "Home")
-                </li>
-
-                <li class="start @Html.IsActive("Home", "programozas")">
-                    @Html.ActionLink("C#", "programozas", "Home")
-                </li>
-
-                <li class="start @Html.IsActive("Home", "linux")">
-                    @Html.ActionLink("Linux", "linux", "Home")
-                </li>
-
-                <li class="start @Html.IsActive("Home", "iszgy")">
-                    @Html.ActionLink("Iszgy", "iszgy", "Home")
-                </li>
-
-                <li class="start @Html.IsActive("Home", "halozat")">
-                    @Html.ActionLink("Hálózat", "halozat", "Home")
-                </li>
-            </ul>
-
-        </nav>
-        </header>
+<body><div class="navbar">
+    <a href="index.html" title="Kijelentkezés"><i class="fa icon">&#xf08b;</i></a>
+    <a href="#" title="Kérdés"><i class="fa icon" onclick="document.getElementById('id01').style.display='block'">&#xf059;</i></a>
 </div>
-    @RenderBody()
-    <div class="container body-content">
-        <footer>
-            <p><img src="~/Content/images/logo.png"></p>
-            <p class="footer-text">Minden jog fenntartva!</p>
-        </footer>
+    <div id="container">
+        <header>
+            <div class="width">
+                <h1><a href="~/Home/logon.html">GIT</a></h1>
+
+                <nav>
+
+                    <ul>
+
+                        <li class="start @Html.IsActive("Home", "html_css_js")">
+                            @Html.ActionLink("HTML+CSS+JS", "html_css_js", "Home")
+                        </li>
+
+                        <li class="start @Html.IsActive("Home", "programozas")">
+                            @Html.ActionLink("C#", "programozas", "Home")
+                        </li>
+
+                        <li class="start @Html.IsActive("Home", "linux")">
+                            @Html.ActionLink("Linux", "linux", "Home")
+                        </li>
+
+                        <li class="start @Html.IsActive("Home", "iszgy")">
+                            @Html.ActionLink("Iszgy", "iszgy", "Home")
+                        </li>
+
+                        <li class="start @Html.IsActive("Home", "halozat")">
+                            @Html.ActionLink("Hálózat", "halozat", "Home")
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+        </header>
+        @RenderBody()
+        <div class="container body-content">
+            <footer style="margin-top:100%; width:100%; position:fixed;">
+                <p><img src="~/Content/images/logo.png"></p>
+                <p class="footer-text">Minden jog fenntartva!</p>
+            </footer>
+        </div>
     </div>
+    <script>
+	var modal = document.getElementById('id01');
+
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+    </script>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
