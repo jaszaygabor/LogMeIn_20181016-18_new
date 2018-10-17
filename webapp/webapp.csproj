@@ -299,6 +299,8 @@
     <Content Include="Views\Home\halozat.cshtml" />
     <Content Include="Views\Home\Linux.cshtml" />
     <Content Include="Views\Home\programozas.cshtml" />
+    <Content Include="Views\Home\html_css_js.cshtml" />
+    <Content Include="Views\Home\reg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

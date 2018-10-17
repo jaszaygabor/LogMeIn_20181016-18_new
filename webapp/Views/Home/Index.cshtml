@@ -1,31 +1,82 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Index";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Belépés</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="~/Content/images/logo1.png" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" name="form">
+                    <span class="login100-form-title">
+                        Üdvözöljük,<br>a Gépész Informatika Tantárában
+                    </span>
+                    <span class="login100-form-avatar">
+                        <img src="images/gepesz.png">
+                    </span>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                    <div class="wrap-input100">
+                        <input class="input100" type="text" name="email" onchange="eltun()">
+                        <span class="focus-input100" placeholder="E-mail cím"></span>
+                    </div>
+
+                    <div class="wrap-input100">
+                        <input class="input100" id="check" type="password" name="jelszo">
+                        <span class="focus-input100" placeholder="Jelszó"></span>
+                        <i class="material-icons m-b-35 m-l-10 szem" id="eye" onclick="asd()">&#xe417;</i>
+                    </div>
+
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Belépés
+                        </button>
+                    </div>
+
+                    <ul class="login-more">
+                        <li class="m-b-8">
+                            <span class="txt1">Elfelejtette az </span><a href="newemail.html" class="txt2">E-mail címét</a><span class="txt1">/</span><a href="newpassword.html" class="txt2">Jelszavát</a><span class="txt1">?</span>
+                        </li>
+
+                        <li style="margin-top:0px">
+                            <span class="txt1">Nincs felhasználója? </span><a href="reg.html" class="txt2">Regisztráljon</a><span class="txt1">!</span>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    <footer style=" width:100%; position:fixed;">
+        <p class="update">Utoljára frissítve: 2018.10.12.</p>
+        <p class="txt">Mátészalkai Szakképzési Centrum Gépészeti Szakgimnáziuma és Kollégiuma</p>
+        <p class="txt">4700 Mátészalka, Kölcsey u. 12.</p>
+        <p class="footer-text">Minden jog fenntartva!</p>
+
+
+    </footer>
+    <script>
+function asd() {
+    var pass = document.getElementById("check");
+    var eye_color = document.getElementById("eye");
+    if (pass.type === "password") {
+        pass.type = "text";
+      eye_color.style.color = " #e60000";
+    } else {
+        pass.type = "password";
+        eye_color.style.color = "#57b846";
+    }
+}
+
+    </script>
+</body>
+</html>
