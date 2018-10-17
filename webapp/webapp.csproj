@@ -296,6 +296,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\UserDetails.cshtml" />
     <Content Include="Views\Home\halozat.cshtml" />
+    <Content Include="Views\Home\Linux.cshtml" />
     <Content Include="Views\Home\programozas.cshtml" />
   </ItemGroup>
   <ItemGroup>

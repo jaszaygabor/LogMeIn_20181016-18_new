@@ -332,3 +332,5 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+*.user
+webapp/.vs/webapp/v14/.suo
