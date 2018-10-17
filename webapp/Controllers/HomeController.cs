@@ -54,5 +54,10 @@ namespace webapp.Controllers
             this.ViewBag.Page = "html_css_js";
             return View();
         }
+        public ActionResult reg()
+        {
+            this.ViewBag.Page = "reg";
+            return View();
+        }
     }
 }
