@@ -67,6 +67,7 @@ namespace webapp.Controllers
             this.ViewBag.Page = "reg";
             return View();
         }
+               
 
     }
 }
