@@ -37,7 +37,7 @@ namespace webapp.Controllers
         }
         public ActionResult programozas()
         {
-            this.ViewBag.Page = "Programozas";
+            this.ViewBag.Page = "programozas";
             return View();
         }
         public ActionResult html_css_js()
@@ -55,19 +55,18 @@ namespace webapp.Controllers
             this.ViewBag.Page = "iszgy";
             return View();
         }
-<<<<<<< HEAD
+
         public ActionResult halozat()
         {
             this.ViewBag.Page = "halozat";
             return View();
         }
-
-=======
+        
         public ActionResult reg()
         {
             this.ViewBag.Page = "reg";
             return View();
         }
->>>>>>> eb6e8520f270b80b6edfce264f076f54a7d91e4a
+
     }
 }
