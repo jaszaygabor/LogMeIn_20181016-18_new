@@ -303,6 +303,7 @@
     <Content Include="Views\Home\reg.cshtml" />
     <Content Include="Views\Home\iszgy.cshtml" />
     <Content Include="Views\Home\impresszum.cshtml" />
+    <Content Include="Views\Home\logon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
