@@ -2,6 +2,7 @@
     Layout = "";
 }
 @* Ide nem kell layout *@
+@model webapp.Models.User
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -12,8 +13,11 @@
     <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/reg.css">
-    <script type="text/javascript" src="~/Content/js/jquery.js"></script>
-    <script type="text/javascript" src="~/Content/js/passwordStrengthMeter.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/reg.css">
+
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/passwordStrengthMeter.js"></script>
+
 </head>
 <body>
 
@@ -22,7 +26,7 @@
 
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" method="post" name="regisztracioEll" action="RegEll.php">
+                <form class="login100-form validate-form" method="post" name="regisztracioEll" action="/Account/Register">
                     <span class="login100-form-title">
                         Egyszerű és gyors regisztrálás
                     </span>
@@ -31,27 +35,27 @@
                     </span>
 
                     <div class="wrap-input100">
-                        <input class="input100" type="text" name="v_nev" onblur="eltun(event)">
+                        <input class="input100" type="text" name="LastName" id="LastName" onblur="eltun(event)">
                         <span class="focus-input100" placeholder="Vezetékév"></span>
                     </div>
                     <div class="wrap-input100">
-                        <input class="input100" type="text" name="k_nev" onblur="eltun(event)">
+                        <input class="input100" type="text" name="FirstName" id="FirstName" onblur="eltun(event)">
                         <span class="focus-input100" placeholder="Keresztnév"></span>
                     </div>
                     <div class="wrap-input100">
-                        <input class="input100" type="text" name="ev" onblur="eltun(event)">
+                        <input class="input100" type="text" name="BirthYear" id="BirthYear" onblur="eltun(event)">
                         <span class="focus-input100" placeholder="Szül. év"></span>
                     </div>
                     <div class="wrap-input100">
-                        <input class="input100" type="text" name="email" onblur="eltun(event)">
+                        <input class="input100" type="text" name="Email" id="Email" onblur="eltun(event)">
                         <span class="focus-input100" placeholder="E-mail cím"></span>
                     </div>
                     <div class="wrap-input100">
-                        <input class="input100" type="text" name="om" onblur="eltun(event)">
+                        <input class="input100" type="text" name="OMCode" id="OMCode" onblur="eltun(event)">
                         <span class="focus-input100" placeholder="OM kód"></span>
                     </div>
                     <div class="wrap-input100">
-                        <input class="input100" id="password" type="password" name="jelszo" onblur="eltun(event)">
+                        <input class="input100" id="password" type="password" name="password" onblur="eltun(event)">
                         <span class="focus-input100" placeholder="Jelszó"></span>
                         <div class="graybar" id="graybar"></div>
                         <div class="colorbar" id="colorbar"></div>
@@ -59,7 +63,7 @@
                         <span class="percent" id="percent"></span>
                     </div>
                     <div class="wrap-input100">
-                        <input class="input100" id="password2" type="password" name="jelszo2" onblur="eltun(event)">
+                        <input class="input100" id="password2" type="password" name="password2" onblur="eltun(event)">
                         <span class="focus-input100" placeholder="Jelszó megerősítése"></span>
                     </div>
                     <p id="text" class="m-t-20">A CapsLock be van kapcsolva!</p>
@@ -99,7 +103,7 @@ function eltun(event)
 	event.srcElement.classList.remove("filled");
 }
 }
-		var input = document.getElementById("password");
+        var input = document.getElementById("Password");
 		var text = document.getElementById("text");
 		input.addEventListener("keyup", function(event) {
 
@@ -110,7 +114,7 @@ function eltun(event)
 		  }
 		});
 
-		var input2 = document.getElementById("password2");
+		var input2 = document.getElementById("ConfirmPassword");
 		var text = document.getElementById("text");
 		input2.addEventListener("keyup", function(event) {
 
@@ -121,5 +125,6 @@ function eltun(event)
 		  }
 		});
     </script>
+ 
 </body>
 </html>
