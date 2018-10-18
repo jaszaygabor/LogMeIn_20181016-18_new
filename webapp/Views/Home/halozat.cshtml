@@ -1,61 +1,93 @@
-﻿        <div id="id01" class="modal">
+﻿<div class="navbar">
+    <a href="~/Views/Home/index.html" title="Kijelentkezés"><i class="fa icon">&#xf08b;</i></a>
 
-            <form class="modal-content animate">
+    <a href="#" title="Kérdés"><i class="fa icon" onclick="document.getElementById('id01').style.display='block'">&#xf059;</i></a>
+</div>
+<div id="container">
 
-                <div class="container">
-                    <span class="asd">Valami</span>
-                    <br>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Bezár</button>
+    <header>
+        <div class="width">
+            <h1 style="font-family: 'Arial Black', Verdana, Serif"> <a href="~/Views/Home/logon.html">GIT</a></h1>
 
-                </div>
-            </form>
-        </div>
-        <div id="body" class="width">
+            <nav>
 
-            <section id="content" class="two-column with-right-sidebar">
+                    <ul>
+                        <li class="start "><a href="~/Views/Home/programozas">Programozás</a></li>
+                        <li class=""><a href="~/Views/Home/html_css_js">HTML+CSS+JS</a></li>
+                        <li><a href="~/Views/Home/linux">Linux</a></li>
+                        <li><a href="~/Views/Home/iszgy">Iszgy</a></li>
+                        <li class="end selected"><a href="~/Views/Home/halozat">Hálózat</a></li>
+                    </ul>
 
-                <article>
+            </nav>
 
-                    <h2>Hálózat</h2>
-
-                    <p>Még nincsennek bejegyzések, de dolgozunk rajta!</p>
-                    <p><img src="~/Content/images/gif.gif"></p>
-
-
-
-                </article>
 
         </div>
-        <aside class="sidebar big-sidebar right-sidebar">
+    </header>
 
-                <li>
-                    <h4>Házi feladat</h4>
-                    <ul class="blocklist">
-                        <li>Most nincs házi feladat😉</li>
-                    </ul>
-                </li>
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate">
 
 
+            <div class="container">
+                <span class="asd">Valami</span>
+                <br>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Bezár</button>
+
+            </div>
+        </form>
+    </div>
+    <div id="body" class="width">
+
+
+        <section id="content" class="two-column with-right-sidebar">
+
+            <article>
+
+                <h2>Hálózat</h2>
+
+                <p>Még nincsennek bejegyzések, de dolgozunk rajta!</p>
+                <p><img src="~/Content/images/gif.gif"></p>
 
 
 
-                <li>
-                    <h4>Tanár</h4>
-                    <ul class="newslist">
-                        <li>
-                            <p>Bakos Richárd</p>
-                        </li>
-                    </ul>
-                </li>
+            </article>
+
+    </div>
+    <aside class="sidebar big-sidebar right-sidebar">
+
+        <ul>
+            <li>
+                <h4>Házi feladat</h4>
+                <ul class="blocklist">
+                    <li>Most nincs házi feladat😉</li>
+                </ul>
+            </li>
 
 
-</aside>
-    <script>
-        var modal = document.getElementById('id01');
 
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+
+
+            <li>
+                <h4>Tanár</h4>
+                <ul class="newslist">
+                    <li>
+                        <p>Bakos Richárd</p>
+                    </li>
+                </ul>
+            </li>
+
+
+    </aside>
+    <div class="clear"></div>
+</div>
+<script>
+    var modal = document.getElementById('id01');
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
-    </script>
+    }
+</script>
