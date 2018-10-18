@@ -301,6 +301,7 @@
     <Content Include="Views\Home\programozas.cshtml" />
     <Content Include="Views\Home\html_css_js.cshtml" />
     <Content Include="Views\Home\reg.cshtml" />
+    <Content Include="Views\Home\iszgy.cshtml" />
     <Content Include="Views\Home\impresszum.cshtml" />
   </ItemGroup>
   <ItemGroup>

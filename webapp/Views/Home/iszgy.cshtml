@@ -1,6 +1,13 @@
-﻿        <div id="id01" class="modal">
+﻿    <div class="navbar">
+        <a href="index.html" title="Kijelentkezés"><i class="fa icon">&#xf08b;</i></a>
+
+        <a href="#" title="Kérdés"><i class="fa icon" onclick="document.getElementById('id01').style.display='block'">&#xf059;</i></a>
+    </div>
+    <div id="container">
+        <div id="id01" class="modal">
 
             <form class="modal-content animate">
+
 
                 <div class="container">
                     <span class="asd">Valami</span>
@@ -10,13 +17,15 @@
                 </div>
             </form>
         </div>
+
         <div id="body" class="width">
+
 
             <section id="content" class="two-column with-right-sidebar">
 
                 <article>
 
-                    <h2>Hálózat</h2>
+                    <h2>Iszgy</h2>
 
                     <p>Még nincsennek bejegyzések, de dolgozunk rajta!</p>
                     <p><img src="~/Content/images/gif.gif"></p>
@@ -28,6 +37,7 @@
         </div>
         <aside class="sidebar big-sidebar right-sidebar">
 
+            <ul>
                 <li>
                     <h4>Házi feladat</h4>
                     <ul class="blocklist">
@@ -47,15 +57,19 @@
                         </li>
                     </ul>
                 </li>
+            </ul>
 
-
-</aside>
+        </aside>
+        <div class="clear"></div>
+    </div>
     <script>
-        var modal = document.getElementById('id01');
+var modal = document.getElementById('id01');
 
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
     </script>
+</body>
+</html>
