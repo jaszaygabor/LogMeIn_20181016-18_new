@@ -143,17 +143,23 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
+    padding-top:10px;
   margin-bottom:10px;
 }
 
 .login100-form-avatar {
   display: block;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto; 
+  padding-top:10px;
+    padding-bottom:20px;
+   text-align: center;
 }
 
 .login100-form-avatar img {
-  width: 100%;
+  width: 80%;
+
+
 }
 
 .back
@@ -233,6 +239,12 @@ position: absolute;
   top: -5px;
   font-size: 15px;
 }
+.input100:focus + .focus-input100::after,
+.input100.filled + .focus-input100::after {
+  top: -5px;
+  font-size: 15px;
+}
+
 
 .input100:focus + .focus-input100::before {
   width: 100%;
@@ -322,6 +334,10 @@ position: absolute;
   margin-top:20px;
   
 }
+.update
+{
+  text-align: right;
+}
 .login100-form-btn
 {
   font-family: Arial;
@@ -369,6 +385,7 @@ footer  {
 footer p {
   text-align: center;
   margin-bottom: 0;
+  line-height:1;
 }
 footer p img
 {
@@ -379,6 +396,13 @@ footer p, footer p a {
   color: #666;
   border-bottom-color: #666;
 }
+footer div {
+  color: #666;
+  font-size:12px;
+  float:right;
+  margin:auto;
+  position:absolute;
+}
 @media screen and (max-width: 800px){
   footer .footer-content ul { margin-bottom: 15px; }
 
@@ -386,14 +410,9 @@ footer p, footer p a {
 
 footer .footer-content ul { width: auto; float: none; }
 }
-
-.update
-{
-  text-align: right;
-}
 .txt
 {
-  top: 0;
+  top: -10px;
   text-align: center;
 }
 .footer-text

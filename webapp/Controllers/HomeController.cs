@@ -74,12 +74,16 @@ namespace webapp.Controllers
             this.ViewBag.Page = "impresszum";
             return View();
         }
-        public ActionResult logon()
+        public ActionResult newpassword()
         {
-            this.ViewBag.Page = "logon";
+            this.ViewBag.Page = "newpassword";
             return View();
         }
-
+        public ActionResult newemail()
+        {
+            this.ViewBag.Page = "newemail";
+            return View();
+        }
 
         public ActionResult Send()
         {
