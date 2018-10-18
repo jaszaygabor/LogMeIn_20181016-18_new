@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using webapp.Models;
@@ -83,6 +85,21 @@ namespace webapp.Controllers
             return View();
         }
 
+        public ActionResult Send()
+        {
+            MailMessage m = new MailMessage("teszt@teszt.hu", "jaszay.gabor1@gmail.com");
+            m.Body = "teszt";
+            m.Subject = "teszt";
+            SmtpClient client = new SmtpClient();
+            client.Port = 465;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Host = "mail.t-online.hu";
+            client.Credentials = new NetworkCredential("jaszay.gabor@t-online.hu", ""); ;
+            client.EnableSsl = true;
+            client.Send(m);
 
+            return Json(null);
+        }
     }
 }
