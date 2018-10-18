@@ -303,12 +303,9 @@
     <Content Include="Views\Home\reg.cshtml" />
     <Content Include="Views\Home\iszgy.cshtml" />
     <Content Include="Views\Home\impresszum.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Home\newpassword.cshtml" />
     <Content Include="Views\Home\newemail.cshtml" />
-=======
     <Content Include="Views\Home\logon.cshtml" />
->>>>>>> ed2d53f5ffe3b909de1c944f9dffc8631173102e
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
